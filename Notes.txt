@@ -1,0 +1,71 @@
+Django Setup
+1. Check if Python is installed:
+    python --version or py --version
+2. Create Virtual Environment
+    Create a project folder:
+        mkdir my_django_project
+        cd my_django_project
+    Create virtual environment:
+        python -m venv venv 
+    Activate it:
+        Windows
+            venv\Scripts\activate
+        Mac/Linux
+            source venv/bin/activate
+        You’ll see (venv) appear in your terminal.
+3:  Install Django
+        pip install django
+        Check version:
+            django-admin --version
+4:  Create Django Project
+        django-admin startproject config . (configuration logic)
+5: Run the Server
+    python manage.py runserver
+        Open browser
+        http://127.0.0.1:8000/
+6.  Create Your First App
+        python manage.py startapp core` (businness logic)'
+        register the app inside installed apps in settings.py
+
+-----------------------------------------------------------------
+Create a route which displays profile details of the user entered, use dynamic urls and views
+path('/profile/<str:name>/<int:age>/<str:occupation>', profile)
+Use neccessary html and css templates whereever needed.
+-----------------------------------------------------------------
+views.py
+Behaves like a controller, it tells what to render
+We can render html, handle logical operations etc
+
+urls.py
+Behaves as routes, it tells where to render a specific view
+
+Next session:
+Template configuration, render images (static files), work with models, relationships
+-------------------------------------------------------------------
+Templates:- 
+Presentation layer of the Django application (renders html/css/images)
+
+Set up templates:-
+under the app component (in our case, core) -- folder templates -- core -- create html files
+{% block content %}
+{% end block %} :- template resolver (inheriting templates)
+
+Once the html files are ready, call it in views.py
+-----------------------------------------------------------------------
+Assignment :- render images in about page + for contact and blog page, render html page
+next session :- models / relationships
+admin panel in django (super user/admin users etc)
+form handling (file uploads)
+-------------------------------------------------------------------------
+create super user
+py manage.py createsuperuser
+-----------
+make migrations command
+py manage.py makemigrations
+py manage.py migrate
+-------------------------------------------------------------------------
+Assignment:-
+Create a tab in the navbar to view all courses, display the course as a grid of cards
+Try to give a thumbnail input (image) for uploading course data
+---------------------------------------
+Between login and logout implement sessions 

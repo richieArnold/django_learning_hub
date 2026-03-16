@@ -1,0 +1,26 @@
+<!-- inherit the base.html -->
+{% extends "core/base.html" %} {% block content %}
+<h2>My Courses</h2>
+<p>This is the view courses page.</p>
+<ul>
+  {% for course in courses %}
+  <li>{{ course.title }} - {{ course.description }} - ${{ course.price }} -
+    {% if course.thumbnail %}
+    <img src="{{ course.thumbnail.url }}" alt="{{ course.title }} thumbnail" width="100" />
+    {% else %}
+    No thumbnail
+    {% endif %}
+    <a href="{% url 'courseDetail' course.id %}">
+      <button style="background-color: blue; color: white;">View Course</button>
+    </a>
+    <a href="{% url 'deleteCourse' course.id %}">
+      <button style="background-color: red; color: white;">Delete Course</button>
+    </a>
+    <hr>
+  </li>
+  {% endfor %}
+</ul>
+<a href="{% url 'logout' %}">
+  <button>Logout</button>
+</a>
+{% endblock content %}

@@ -1,0 +1,14 @@
+<!-- inherit the base.html -->
+ {% extends "core/base.html" %}
+    {% block content %}
+        <h2>{{ course.title }}</h2>
+        <p>{{ course.description }}</p>
+        <p>Price: ${{ course.price }}</p>
+        {% if course.thumbnail %}
+        <img src="{{ course.thumbnail.url }}" alt="{{ course.title }} thumbnail" width="100" />
+        {% else %}
+        <p>No thumbnail available</p>
+        {% endif %}
+        <!-- url to go back to viewCourses page -->
+        <a href="{% url 'viewCourses' %}">Back to Courses</a>
+    {% endblock content %}

@@ -1,0 +1,89 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  background-color: navy;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbrand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links > a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.main {
+  min-height: 90vh;
+}
+
+.footer {
+  background-color: navy;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* course form styles */
+.main {
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+}
+.form-title {
+  background-color: black;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  color: white;
+}
+.main > .courseform {
+  width: 50%;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group > label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group > input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid green;
+  border-radius: 5px;
+}
+
+.form-group > textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid green;
+  border-radius: 5px;
+}
+
+.form-group > button {
+  background-color: blue;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+.form-group > button:hover {
+  background-color: lightblue;
+  color: black;
+  cursor: pointer;
+}
